@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteMovie = exports.getMovieById = exports.createMovie = exports.getAllMovie = void 0;
+exports.getMovieById = exports.createMovie = exports.getAllMovie = void 0;
 const movie_1 = __importDefault(require("../models/movie"));
 const getAllMovie = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -53,14 +53,3 @@ const getMovieById = (req, res) => __awaiter(void 0, void 0, void 0, function* (
     }
 });
 exports.getMovieById = getMovieById;
-const deleteMovie = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        yield movie_1.default.findByIdAndDelete(req.params.id);
-        return res.sendStatus(204);
-    }
-    catch (error) {
-        const errorMessage = error instanceof Error ? error.message : 'Error al eliminar el producto';
-        return res.status(500).json({ error: errorMessage });
-    }
-});
-exports.deleteMovie = deleteMovie;

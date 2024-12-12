@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.loginUser = exports.getUserById = exports.getAllUsers = exports.registerUser = void 0;
+exports.getUserById = exports.getAllUsers = exports.registerUser = void 0;
 const user_1 = __importDefault(require("../models/user"));
 const registerUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -58,19 +58,3 @@ const getUserById = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     }
 });
 exports.getUserById = getUserById;
-const loginUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        const { email, password } = req.body;
-        const user = yield user_1.default.findOne({ email });
-        if (!user || !(yield user.comparePassword(password))) {
-            res.status(401).json({ message: "Invalid email or password" });
-            return;
-        }
-        res.status(200).json({ message: "welcome", user });
-    }
-    catch (error) {
-        const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
-        res.status(500).json({ error: errorMessage });
-    }
-});
-exports.loginUser = loginUser;
