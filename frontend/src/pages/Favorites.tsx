@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import MovieCard from "../components/MovieCard";
 
 
+
 interface Movie {
   _id: string;
   title: string;
@@ -49,7 +50,7 @@ const Favorites: React.FC = () => {
       ) : (
         <p>No favorite movies yet. Start adding some!</p>
       )}
-    <img src="../assets/empty.png" alt="No favorite movies" />
+    <img src="/assets/empty.png" alt="No favorite movies" />
     </div>
   );
 };

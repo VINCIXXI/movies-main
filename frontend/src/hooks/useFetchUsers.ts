@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import apiClient from "../utils/api";
+import axios from "axios";
 
 const useFetchUsers = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    apiClient
+    axios
       .get("/api/users")
       .then((response) => setUsers(response.data))
       .finally(() => setLoading(false));

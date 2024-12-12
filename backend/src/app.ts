@@ -5,7 +5,7 @@ import userRoutes from "./routes/userRoutes";
 
 const app = Express();
 
-app.use(cors());
+app.use(cors({ origin: "http://0.0.0.0:5000"  }));
 app.use(Express.json());
 
 app.use("/api/movies", movieRoutes);
