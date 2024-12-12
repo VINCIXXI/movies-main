@@ -15,7 +15,7 @@ const routes: Route[] = [
   { path: "/add-movie", component: AddMovie },
   { path: "/movie/:id", component: MovieDetails },
   { path: "/favorites", component: Favorites },
-  { path: "/register-user", component: RegisterUser },
+  { path: "/register-users", component: RegisterUser },
   { path: "/users", component: UsersList },
 ];
 

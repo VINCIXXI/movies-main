@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import routes from "./routes/routes";
 import Footer from "./components/footer";
 
+
 const App: React.FC = () => {
   return (
     <Router>
