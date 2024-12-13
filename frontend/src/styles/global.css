@@ -70,7 +70,6 @@ a {
     margin: 1rem;
     max-width: 300px;
     text-align: center;
-    padding: 8px;
 }
 
 .movie-card img {
@@ -81,22 +80,33 @@ a {
 }
 
 .movie-card h3 {
-    margin: 0.5rem 0;
+    margin: 0px;
+}
+
+.movie-card h4{
+    line-height: 0px;
+    margin: 0px;
 }
 
 .movie-card p {
     color: #666;
     font-size: 0.9rem;
+    padding: 0px 8px;
+    margin-bottom: 24px;
 }
 
   /* User Card */
 .user-card {
     background-color: #fefefe;
     border: 1px solid #ddd;
-    border-radius: 20px;
-    padding: 8px;
+    border-radius: 12px;
+    padding: 16px;
     margin: 1rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .user-card h3 {
@@ -213,7 +223,11 @@ form button:hover {
 }
 
 .favorites img{
-    width: 100px;
-    height: 100px;
-    margin: 1rem;
+    width: 200px;
+    height: 200px;
+    margin-top: 5rem;
+}
+
+.home{
+    padding-bottom: 4rem;
 }

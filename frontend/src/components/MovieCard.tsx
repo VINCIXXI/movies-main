@@ -18,9 +18,9 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
             <h3>{title}</h3>
             <p><strong>Category:</strong> {category}</p>
             <h4>Price:</h4>
-            <ul>
+            <p>
                 {price}
-            </ul>
+            </p>
             <h4>Description:</h4>
             <p>{description}</p>
         </div>
